@@ -1,0 +1,236 @@
+@font-face {
+    font-family: pacifico;
+    src: url(../webfonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: righteous;
+    src: url(../webfonts/Righteous-Regular.ttf);
+}
+@font-face {
+    font-family: PTSansCaption;
+    src: url(../webfonts/PTSansCaption-Regular.ttf);
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --h1Col: #352e28;
+}
+
+body{
+    background-color: #f7ecde;
+    font-family: PTSansCaption;
+}
+
+
+.h1Col{
+    color: #352e28;
+}
+.fs-60{
+    font-size: 60px;
+}
+
+main{
+    width: 85%;
+}
+
+main h1{
+    font-family: pacifico;
+}
+
+main h1::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: #fec260;
+    height: 25%;
+    bottom: 8px;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+main h1:hover::before{
+    height: 60%;
+}
+
+
+.bookmarkContent{
+    border-block: black 2px dotted;
+}
+
+.bookmarkContent h2{
+    font-family: righteous;
+    font-size: 27px;
+    font-weight: 400;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.divForm input{
+    border: rgba(128, 128, 128, 0.667) 1px solid;
+    margin-block: 7px;
+    border-radius: 15px;
+    padding: 8px 15px;
+}
+
+.form-control:focus{
+    border-color: #d99c39;
+    box-shadow: 0 0 0 .25rem #fec26055;;
+}
+
+
+.btnSubmit{
+    background-color: #d1512d;
+    border: 1px solid #d1512d;
+    color: white;
+    transition: all 0.25s;
+}
+
+.btnSubmit:hover{
+    background-color: #a03315;
+}
+
+
+main table{
+    width: 100%;
+}
+
+main table th{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+main table td{
+    text-align: center;
+    padding: 7px;
+}
+
+
+.buttonStyle{
+    transition: all 0.2s;
+    padding: 7px 16px;
+    border-radius: 17px;
+}
+
+#btnvisit{
+    color: #fff;
+    background-color: #9eb23b;
+}
+#btnvisit:hover{
+    background-color: #8a9e23;
+}
+
+
+.searchInput{
+    border: 1px solid rgba(128, 128, 128, 0.667);
+}
+
+#searchCounter
+{
+    width: 45%;
+    height: 80px;
+}
+
+div.nameValid
+{
+    width: 55%;
+    height: 50px;
+    padding: 0;
+}
+div.urlValid{
+    width: 15%;
+    height: 50px;
+    padding: 0;
+}
+
+
+
+
+
+
+
+/*                Media Query                */
+
+
+
+
+@media only screen and (max-width: 768px){
+    main h1{
+        font-size: 50px;
+    }
+    .bookmarkContent h2{
+        font-size: 18px;
+    }
+    label span{
+        font-size: 12px;
+    }
+    main button.btnSubmit,
+    main button#btnUpdate{
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    main table th{
+        font-size: 15px;
+    }
+    main table td{
+        font-size: 10px;
+    }
+    button.buttonStyle {
+        padding: 2px 4px;
+        border-radius: 15px;
+    }
+    button.buttonStyle,
+    i{
+        font-size: 7px;
+    }
+    a.buttonStyle{
+        font-size: 7px;
+        padding: 4px 8px;
+    }
+    div#searchCounter{
+        width: 85%;
+        font-size: 13px;
+    }
+    div.nameValid {
+        font-size: 11px;
+        width: 95%;
+        height: 35px;
+        padding: 0;
+    }
+
+    div.urlValid {
+        font-size: 11px;
+        width: 88%;
+        height: 35px;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 992px)
+{
+    div.nameValid {
+        width: 80%;
+        height: 35px;
+        padding: 0;
+    }
+    div.urlValid {
+        width: 65%;
+        height: 35px;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+
+    div.urlValid,
+    div.nameValid {
+        font-size: 8px;
+    }
+}
